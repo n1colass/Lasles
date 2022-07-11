@@ -47,14 +47,24 @@
         color: $colorDark;
         font-weight: 500;
         margin: auto 0;
+        transition: 0.3s color;
+        &:hover { 
+            color: $colorSecondary;
+        }
     }
     &_sign-up{
+        cursor: pointer;
         color: $colorSecondary;
         font-weight: 500;
         font-size: 16px;
         padding: 13px 45px;
         border: 1px solid $colorSecondary;
         border-radius: 50px;
+        transition: 0.3s all;
+        &:hover { 
+            color: $white;
+            background-color: $colorSecondary;
+        }
     }
 }
 
