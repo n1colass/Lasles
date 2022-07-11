@@ -1,0 +1,114 @@
+// HEADER
+
+.header_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 153px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.logo{
+    margin: auto 0;
+    img{
+        @media (max-width: 992px){
+           
+        }
+    }
+}
+// NAVBAR
+
+.menu {
+    margin: auto 0;
+}
+.menu_list {
+    display: flex;
+    gap: 40px; 
+}
+.menu_item {
+    .menu_item-link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: $colorPrimary;
+        transition: 0.3s color;
+        &:hover{
+            color: $colorSecondary;
+        }
+    }
+
+}
+// BUTTONS
+.header_btn{
+    display: flex;
+    margin: auto 0;
+    gap: 30px;
+    &_sign-in{
+        color: $colorDark;
+        font-weight: 500;
+        margin: auto 0;
+    }
+    &_sign-up{
+        color: $colorSecondary;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 13px 45px;
+        border: 1px solid $colorSecondary;
+        border-radius: 50px;
+    }
+}
+
+// BURGER
+
+.burger{
+    display: none;
+    cursor: pointer;
+    margin: auto 0;
+    &_line{
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: $colorPrimary;
+    } 
+
+}
+
+@media (max-width: 768px){
+    .burger{
+        display: block;
+    }
+    .burger.active .burger_line:nth-child(2){
+        opacity: 0;
+    }
+    .burger.active .burger_line:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+    .burger.active .burger_line:nth-child(3){
+        transform:  translateY(-7px) rotate(-45deg);
+    } 
+    .menu_list{
+        flex-direction: column;
+        position: absolute;
+        top: -300%;
+        left: 0;
+        gap: 0;
+        background-color: $colorPrimary;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: 0.4s;
+        .menu_item{
+            margin: 2em 0;
+            .menu_item-link{
+                font-size: 30px;
+                color: #000000;
+            }
+        }
+        &.active{
+            position: fixed;
+            top: 70px;
+        }
+    }
+}
