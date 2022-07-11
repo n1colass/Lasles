@@ -4,26 +4,29 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    gap: 153px;
+    //gap: 153px;
     padding-top: 45px;
     padding-bottom: 45px;
 }
 .logo{
-    margin: auto 0;
+    margin: auto;
     img{
         @media (max-width: 992px){
-           
+           width: 100px;
         }
     }
 }
 // NAVBAR
 
 .menu {
-    margin: auto 0;
+    margin: auto;
 }
 .menu_list {
     display: flex;
     gap: 40px; 
+    @media (max-width: 992px){
+        gap: 20px;
+    }
 }
 .menu_item {
     .menu_item-link {
@@ -35,13 +38,17 @@
         &:hover{
             color: $colorSecondary;
         }
+        @media (max-width: 992px){
+            font-size: 13px;
+        }
     }
 
 }
 // BUTTONS
+
 .header_btn{
     display: flex;
-    margin: auto 0;
+    margin: auto;
     gap: 30px;
     &_sign-in{
         color: $colorDark;
@@ -50,6 +57,9 @@
         transition: 0.3s color;
         &:hover { 
             color: $colorSecondary;
+        }
+        @media (max-width: 992px){
+            font-size: 13px;
         }
     }
     &_sign-up{
@@ -65,7 +75,12 @@
             color: $white;
             background-color: $colorSecondary;
         }
+        @media (max-width: 992px){
+            font-size: 13px;
+            padding: 0.5rem 1.5rem;
+        }
     }
+    
 }
 
 // BURGER
