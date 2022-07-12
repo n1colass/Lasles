@@ -10,20 +10,28 @@
 }
 .logo{
     margin: auto;
+    z-index: 10;
     img{
         @media (max-width: 992px){
-           width: 100px;
+           width: 110px;
         }
     }
+    @media (max-width: 768px){
+        margin: 0;
+    }
 }
+
 // NAVBAR
 
 .menu {
     margin: auto;
+    display: flex;
+    flex-grow: 1;
 }
 .menu_list {
     display: flex;
-    gap: 40px; 
+    gap: 40px;
+    margin: auto;
     @media (max-width: 992px){
         gap: 20px;
     }
@@ -48,7 +56,7 @@
 
 .header_btn{
     display: flex;
-    margin: auto;
+    margin: auto 0;
     gap: 30px;
     &_sign-in{
         color: $colorDark;
@@ -67,17 +75,18 @@
         color: $colorSecondary;
         font-weight: 500;
         font-size: 16px;
-        padding: 13px 45px;
+        padding: 10px 40px;
         border: 1px solid $colorSecondary;
         border-radius: 50px;
         transition: 0.3s all;
+        text-align: center;
         &:hover { 
             color: $white;
             background-color: $colorSecondary;
         }
         @media (max-width: 992px){
             font-size: 13px;
-            padding: 0.5rem 1.5rem;
+            padding: 0.3rem 1.2rem;
         }
     }
     
@@ -89,20 +98,21 @@
     display: none;
     cursor: pointer;
     margin: auto 0;
+    z-index: 10;
     &_line{
         display: block;
-        width: 25px;
+        width: 22px;
         height: 2px;
-        margin: 5px auto;
+        margin: 5px 0 5px auto;
         transition: all 0.3s ease-in-out;
-        background-color: $colorPrimary;
+        background-color: $black;
     } 
 
 }
-
-@media (max-width: 768px){
+@media (max-width: 767px){
     .burger{
         display: block;
+        flex-grow: 1;
     }
     .burger.active .burger_line:nth-child(2){
         opacity: 0;
@@ -113,27 +123,50 @@
     .burger.active .burger_line:nth-child(3){
         transform:  translateY(-7px) rotate(-45deg);
     } 
-    .menu_list{
-        flex-direction: column;
-        position: absolute;
-        top: -300%;
-        left: 0;
-        gap: 0;
-        background-color: $colorPrimary;
+    .menu{
         width: 100%;
         height: 100%;
-        text-align: center;
-        transition: 0.4s;
-        .menu_item{
+        padding-top: 100px;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #F8F8F8;
+        transform: translateX(1020%);
+        transition: transform 0.2s ;
+        &_list{
+            flex-direction: column;
+            text-align: center;
+            gap: 0;
+            margin:0;
+        }
+        .header_btn{
+            flex-direction: column;
+            gap: 0;
             margin: 2em 0;
-            .menu_item-link{
-                font-size: 30px;
-                color: #000000;
+            &_sign-in{
+                padding: 10px 0;
+                color: $colorDark;
+                text-align: center;
+            }
+            &_sign-up{
+                padding: 10px 0;
+                text-align: center;
+                border: none;
+                background-color: $colorSecondary;
+                color: $white;
+                border-radius: 10px;
             }
         }
         &.active{
-            position: fixed;
-            top: 70px;
+            transform: translateX(0);
         }
     }
+    .menu_item{
+        margin: 1em 0;
+        .menu_item-link{
+            font-weight: 500;
+        }
+    } 
 }
