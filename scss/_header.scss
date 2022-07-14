@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    //gap: 153px;
     padding-top: 45px;
     padding-bottom: 45px;
     @media (max-width: 425px){
@@ -166,6 +165,7 @@
             }
         }
         &.active{
+            position: fixed;
             transform: translateX(0);
         }
     }
@@ -174,5 +174,5 @@
         .menu_item-link{
             font-weight: 500;
         }
-    } 
+    }
 }
