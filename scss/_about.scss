@@ -1,0 +1,44 @@
+.about_container {
+    display: flex;
+    padding-top:75px;
+    padding-bottom: 100px;
+
+    .about_img{
+        flex-basis: 50%;
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .about-text{
+        flex-basis: 35%;
+        margin: auto 0 auto auto;
+        .about-text_main{
+            &_head{
+                font-weight: 500;
+                font-size: 35px;
+                line-height: 50px;
+            }
+            &_info{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+        .about-text_list{
+            ul li{
+                height: 25px;
+                margin-bottom: auto;
+                vertical-align: middle;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 30px;
+                list-style-image: url("../img/list.svg");
+                list-style-position: inside
+            }
+        }
+    }
+}
+li::marker{
+    max-width: 25px;
+}
