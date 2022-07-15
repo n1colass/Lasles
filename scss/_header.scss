@@ -58,7 +58,7 @@
 }
 // BUTTONS
 
-.header_btn{
+.btn{
     display: flex;
     margin: auto 0;
     gap: 30px;
@@ -75,7 +75,7 @@
             font-size: 13px;
         }
     }
-    &_sign-up{
+    &_wrapper{
         cursor: pointer;
         color: $colorSecondary;
         font-weight: 500;
@@ -146,7 +146,7 @@
             gap: 0;
             margin:0;
         }
-        .header_btn{
+        .btn{
             flex-direction: column;
             gap: 0;
             margin: 2em 0;
@@ -155,7 +155,7 @@
                 color: $colorDark;
                 text-align: center;
             }
-            &_sign-up{
+            &_wrapper{
                 padding: 10px 0;
                 text-align: center;
                 border: none;
