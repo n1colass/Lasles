@@ -1,0 +1,19 @@
+.expand_container{
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    .expand_img{
+        margin: 50px auto;
+        width: fit-content;
+        img{
+            max-width: 100%;
+        }
+    }
+    .expand_brands {
+        display: flex;
+        justify-content: space-around;
+            img{
+                max-width: 100%;
+            }
+    }
+}

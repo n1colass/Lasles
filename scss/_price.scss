@@ -3,12 +3,20 @@
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.price-text{
+.main-text{
+    margin: 0 auto;
     margin-bottom: 60px;
+    max-width: 555px;
     &_head{
+        max-width: 380px;
+        margin: 0 auto;
         font-weight: 500;
         font-size: 35px;
+        line-height: 50px;
         color: $colorDark;
+        @media (max-width: 425px){
+            font-size: 30px;
+        }
     }
     &_main{
         color: $colorPrimary;
@@ -16,9 +24,15 @@
         font-size: 16px;
         line-height: 30px;
         margin-top: 20px;
+        @media (max-width: 425px){
+            font-size: 12px;
+        }
     }
     p{
         text-align: center;
+        span{
+            font-weight: 500;
+        }
     }
 }
 .price-list{
