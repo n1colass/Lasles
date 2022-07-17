@@ -17,6 +17,10 @@ body{
 .main{
     margin: 0 auto;
 }
+::selection{
+    color: $colorDark;
+    background: $colorSecondary;
+}
 [class*="_container"]{
     max-width: 1200px;
     padding: 0 30px;

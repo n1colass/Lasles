@@ -2,6 +2,7 @@
     padding-bottom: 50px;
 }
 .main-text_testimonials{
+    margin-bottom: 30px;
     .main-text_head{
         max-width: 450px;
         background-color: #fff;
@@ -18,6 +19,9 @@
         border-radius: 10px;
         height: 230px;
         padding: 30px;
+        @media (max-width: 375px){
+            padding: 30px 5px;
+        }
         &:hover{
             border: 2px solid $colorSecondary;
         }
@@ -27,17 +31,32 @@
 .swiper-slide_head {
     display: flex;
     width: 100%;
+    img{
+        @media (max-width: 375px){
+            width: 30px;
+            height: 30px;
+        }
+    }
     &-caption {
         margin: auto 0 auto 20px;
+        @media (max-width: 375px){
+            margin: auto 0 auto 5px;
+        }
        &_name {
             font-weight: 500;
             font-size: 18px;
             color: $colorDark;
+            @media (max-width: 375px){
+                font-size: 14px;
+            }
         }
         &_location {
             font-weight: 400;
             font-size: 14px;
             color: $colorPrimary;
+            @media (max-width: 375px){
+                font-size: 12px;
+            }
         } 
     }
     &-mark {
@@ -50,7 +69,17 @@
             font-size: 16px;
             color: $colorDark;
         }
+        @media (max-width: 375px){
+            img{
+                width: 20px;
+                height: auto
+            }
+            p{
+                font-size: 12px;
+            }
+        }
     }
+    
 }
 .swiper-slide_main {
     margin-top: 20px;
@@ -61,6 +90,9 @@
         color: $colorDark;
         text-align: justify;
         text-justify: inter-word;
+        @media (max-width: 375px){
+            line-height: 20px;
+        }
     }
 }
 // PAGINATION
@@ -68,6 +100,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    @media (max-width: 425px){
+        margin-top: 20px;
+    }
     .swiper-leaf{
         display: flex;
         gap:10px;
@@ -81,13 +116,28 @@
             border: 2px solid $colorSecondary;
             margin-left: 10px;
             border-radius: 30px;
+            transition: all 0.3s;
+            @media (max-width: 425px){
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;;
+            }
+            img{
+                filter: grayscale(0) ;
+                transition: all 0.3s;
+                @media (max-width: 425px){
+                    width: 15px;
+                    height: auto;
+                }
+            }
             &:hover{
                 background-color: $colorSecondary;
                 img{
-                    background: rgba($color: #ffffff, $alpha: 1.0);
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(139deg) brightness(103%) contrast(101%);
                 }
             }
         }
+
         .swiper-leaf-next{
             transform: rotate(180deg);
         }
@@ -100,11 +150,19 @@
     .swiper-pagination-bullet{
         width: 15px;
         height: 15px;
+        @media (max-width: 425px){
+            width: 8px;
+            height: 8px;
+        }
     }
     .swiper-pagination-bullet-active{
         background-color: $colorSecondary;
         width: 45px;
         border-radius:10px;
+        @media (max-width: 425px){
+            width: 25px;
+            border-radius:5px;
+        }
     }
 }
 .swiper-pagination-bullets.swiper-pagination-horizontal{
