@@ -19,3 +19,13 @@ btn.querySelectorAll("[class]").forEach(item =>
         menu.classList.toggle('active');
     }
 ));
+
+const swiper = new Swiper('.swiper',{
+    direction: 'horizontal',
+    slidesPerView: 3,
+    spaceBetween: 50,
+    pagination: {
+        el: ".swiper-pagination-main",
+        clickable: true,
+    }
+});

@@ -1,0 +1,115 @@
+.testimonials_container{
+    padding-bottom: 50px;
+}
+.main-text_testimonials{
+    .main-text_head{
+        max-width: 450px;
+        background-color: #fff;
+    }
+    
+}
+.swiper{
+    width: 100%;
+}
+.swiper-wrapper {
+
+    .swiper-slide {
+        border: 2px solid #DDDDDD;
+        border-radius: 10px;
+        height: 230px;
+        padding: 30px;
+        &:hover{
+            border: 2px solid $colorSecondary;
+        }
+    }
+}
+
+.swiper-slide_head {
+    display: flex;
+    width: 100%;
+    &-caption {
+        margin: auto 0 auto 20px;
+       &_name {
+            font-weight: 500;
+            font-size: 18px;
+            color: $colorDark;
+        }
+        &_location {
+            font-weight: 400;
+            font-size: 14px;
+            color: $colorPrimary;
+        } 
+    }
+    &-mark {
+        display: flex;
+        margin: auto 0 auto auto;
+        gap: 10px;
+        p{
+            margin: auto 0;
+            font-weight: 400;
+            font-size: 16px;
+            color: $colorDark;
+        }
+    }
+}
+.swiper-slide_main {
+    margin-top: 20px;
+    p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 25px;
+        color: $colorDark;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}
+// PAGINATION
+.swiper-control{    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    .swiper-leaf{
+        display: flex;
+        gap:10px;
+        .swiper-leaf-prev,.swiper-leaf-next{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            border: 2px solid $colorSecondary;
+            margin-left: 10px;
+            border-radius: 30px;
+            &:hover{
+                background-color: $colorSecondary;
+                img{
+                    background: rgba($color: #ffffff, $alpha: 1.0);
+                }
+            }
+        }
+        .swiper-leaf-next{
+            transform: rotate(180deg);
+        }
+    }
+    
+}
+.swiper-pagination-main{
+    display: block;
+    margin: auto 0;
+    .swiper-pagination-bullet{
+        width: 15px;
+        height: 15px;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: $colorSecondary;
+        width: 45px;
+        border-radius:10px;
+    }
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+    width: fit-content;
+}
+
+
+
