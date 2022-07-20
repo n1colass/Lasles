@@ -20,6 +20,15 @@ btn.querySelectorAll("[class]").forEach(item =>
     }
 ));
 
+document.querySelector('.footer_logo').addEventListener("click", function(event){
+    event.preventDefault();
+});
+
+document.querySelectorAll('.footer-info_socios-link').forEach( item => {
+    item.addEventListener("click", function(event){
+        event.preventDefault();
+    })
+});
 const swiper = new Swiper('.swiper',{
     direction: 'horizontal',
     slidesPerView: 3,
