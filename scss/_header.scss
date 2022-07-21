@@ -46,7 +46,7 @@
         font-weight: 400;
         font-size: 16px;
         color: $colorPrimary;
-        transition: 0.3s color;
+        transition: all 0.3s ;
         &:hover{
             color: $colorSecondary;
         }
@@ -165,7 +165,8 @@
             }
         }
         &.active{
-            position: fixed;
+            touch-action: none;
+            overflow: hidden;
             transform: translateX(0);
         }
     }
